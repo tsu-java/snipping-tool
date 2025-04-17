@@ -1,0 +1,42 @@
+.tc:hover, .bc:hover {
+    -fx-cursor: v_resize;
+}
+
+.cl:hover, .cr:hover {
+    -fx-cursor: h_resize;
+}
+
+.tl:hover {
+    -fx-cursor: nw_resize;
+}
+
+.tr:hover {
+    -fx-cursor: ne_resize;
+}
+
+.bl:hover {
+    -fx-cursor: sw_resize;
+}
+
+.br:hover {
+    -fx-cursor: se_resize;
+}
+
+Button {
+    -fx-background-color: transparent;
+    -fx-border-color: gray;
+    -fx-text-fill: black;
+}
+
+Button:hover {
+    -fx-background-color: gray;
+    -fx-cursor: hand;
+}
+
+.bg, .tl, .tc, .tr, .cl, .cr, .bl, .bc, .br {
+    -fx-background-color: lightgray;
+}
+
+.grid {
+    -fx-border-color: gray;
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: transparent;" styleClass="grid" stylesheets="@main.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ge.tsu.snippingtool.MainController">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+         <left>
+            <VBox prefWidth="10.0" styleClass="bg" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <VBox prefWidth="10.0" styleClass="bg" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <VBox styleClass="navbar" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <HBox fx:id="titleBox" alignment="CENTER" prefHeight="10.0" spacing="5.0" styleClass="bg">
+                     <children>
+                        <Label fx:id="titleLabel" text="App Title" />
+                        <HBox HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER" spacing="2.0">
+                           <children>
+                              <Button fx:id="btnIconify" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toggleIconify" prefHeight="24.0" prefWidth="24.0" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding></Button>
+                              <Button fx:id="btnFullScreen" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toggleFullScreen" prefHeight="24.0" prefWidth="24.0" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding></Button>
+                              <Button fx:id="btnClose" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" prefHeight="24.0" prefWidth="24.0" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="9.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="10.0" spacing="5.0" styleClass="bg">
+                     <children>
+                        <HBox HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button cancelButton="true" mnemonicParsing="false" onAction="#onSave" text="Save">
+                                 <padding>
+                                    <Insets bottom="4.0" left="16.0" right="16.0" top="4.0" />
+                                 </padding></Button>
+                              <Button defaultButton="true" mnemonicParsing="false" onAction="#onTakeSnapshot" text="Take Snapshot" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="4.0" left="16.0" right="16.0" top="4.0" />
+                                 </padding></Button>
+                              <Button cancelButton="true" mnemonicParsing="false" onAction="#onClear" text="Clear">
+                                 <padding>
+                                    <Insets bottom="4.0" left="16.0" right="16.0" top="4.0" />
+                                 </padding></Button>
+                           </children>
+                        </HBox>
+                        <HBox HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="9.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+         <center>
+            <VBox fx:id="vBoxCenter" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Pane fx:id="edgeNW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4.0" prefWidth="4.0" styleClass="tl" GridPane.columnIndex="1" />
+      <Pane fx:id="edgeN" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4.0" styleClass="tc" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" />
+      <Pane fx:id="edgeNE" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4.0" prefWidth="4.0" styleClass="tr" GridPane.columnIndex="3" />
+      <Pane fx:id="edgeW" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="4.0" styleClass="cl" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+      <Pane fx:id="edgeE" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="4.0" styleClass="cr" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+      <Pane fx:id="edgeSW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4.0" prefWidth="4.0" styleClass="bl" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Pane fx:id="edgeS" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4.0" styleClass="bc" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+      <Pane fx:id="edgeSE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4.0" prefWidth="4.0" styleClass="br" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+   </children>
+</GridPane>
