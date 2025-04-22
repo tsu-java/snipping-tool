@@ -6,7 +6,7 @@
 
     <groupId>ge.tsu</groupId>
     <artifactId>snipping-tool</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>snipping-tool</name>
 
     <properties>
