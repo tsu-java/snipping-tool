@@ -61,9 +61,9 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>ge.tsu.snippingtool/ge.tsu.snippingtool.SnippingTool</mainClass>
-                            <launcher>app</launcher>
-                            <jlinkZipName>app</jlinkZipName>
-                            <jlinkImageName>app</jlinkImageName>
+                            <launcher>snipper</launcher>
+                            <jlinkZipName>snipper</jlinkZipName>
+                            <jlinkImageName>snipper</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>
