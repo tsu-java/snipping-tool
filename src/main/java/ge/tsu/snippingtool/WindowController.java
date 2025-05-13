@@ -1,6 +1,7 @@
 package ge.tsu.snippingtool;
 
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -43,12 +44,18 @@ public abstract class WindowController extends AbstractController implements Ini
     public Button btnFullScreen; // 🗗︎🗖
     public Button btnClose; // 🗙
 
+    private EventHandler<MouseEvent> eventHandler;
+
     public WindowController() {
         super();
         setAfterStageInit((stage) -> {
             // Automatically binds to stage's title
             titleLabel.textProperty().bind(stage.titleProperty());
         });
+    }
+
+    public void setResizeHandler(EventHandler<MouseEvent> eventHandler) {
+        this.eventHandler = eventHandler;
     }
 
     @Override
@@ -133,6 +140,7 @@ public abstract class WindowController extends AbstractController implements Ini
         } else {
             btnFullScreen.setText("\uD83D\uDDD6");
         }
+        eventHandler.handle(null);
     }
 
     public void exit() {
@@ -205,6 +213,9 @@ public abstract class WindowController extends AbstractController implements Ini
                     resizeWest(event);
                     break;
             }
+
+            // Cascade event to child
+            eventHandler.handle(event);
         });
     }
 

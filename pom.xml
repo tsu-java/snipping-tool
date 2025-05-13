@@ -26,7 +26,13 @@
             <version>21</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <!-- https://mvnrepository.com/artifact/org.boofcv/boofcv-ip -->
+        <dependency>
+            <groupId>org.boofcv</groupId>
+            <artifactId>boofcv-core</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j2-impl -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
