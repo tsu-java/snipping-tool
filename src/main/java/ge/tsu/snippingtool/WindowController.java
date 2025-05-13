@@ -55,6 +55,8 @@ public abstract class WindowController extends AbstractController implements Ini
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // In case of debug mode, we'll show thick and colourful borders
         if (DEBUG) {
+            log.warn("DEBUG mode enabled. Don't use this mode in production!");
+
             edgeN.setStyle("-fx-background-color: green;");
             edgeN.setPrefHeight(10);
 

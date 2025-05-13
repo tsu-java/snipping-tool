@@ -34,9 +34,11 @@ public class MainController extends WindowController implements Initializable {
         fileChooser.getExtensionFilters().add(
                 new FileChooser.ExtensionFilter("PNG", "*.png")
         );
+        log.debug("Initialized MainController");
     }
 
     public void onTakeSnapshot() throws AWTException, IOException {
+        log.info("Called onTakeSnapshot(..) action");
         Bounds boundsInScreen = vBoxCenter.localToScreen(vBoxCenter.getBoundsInLocal());
 
         Robot robot = new Robot();
@@ -65,13 +67,17 @@ public class MainController extends WindowController implements Initializable {
     }
 
     public void onSave() throws IOException {
+        log.info("Called onSave(..) action");
         File file = fileChooser.showSaveDialog(stage);
         if (file != null) {
             Files.write(file.toPath(), capturedImageBytes);
+        } else {
+            log.warn("Abruptly canceled save operation");
         }
     }
 
     public void onClear() {
+        log.info("Called onClear(..) action");
         vBoxCenter.getChildren().clear();
     }
 }
